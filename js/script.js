@@ -24,17 +24,19 @@ a = 10;
 b = 15;
 c = 1;
 
-res = (a < b, a < c) ? "10" : (b < c, b < a) ? "15" : (c < a, c < b) ? "1" : "-";
+res = (a < b && a < c) ? "10" : (b < c && b < a) ? "15" : (c < a && c < b) ? "1" : "-";
 
 console.log(res); //1
 
 
 
-let d, v, result;
+let d, v, k, l, result;
 
-d = 10.58;
-v = 8.99;
+d = 8;
+v = 12.5;
 
-result = (10 - d < 10 - v)? "10.58" : "8.99";
-console.log(result); //10.58
+k = (10 - d > 0)? "(10-d)" : "-(10-d)";
+l = (10 - v > 0)? "(10 - v)" : "-(10 - v)";
+result = (k<l) ? "8" : "12.5";
+console.log(result); //
 
