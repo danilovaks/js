@@ -24,19 +24,19 @@ a = 10;
 b = 15;
 c = 1;
 
-res = (a < b && a < c) ? "10" : (b < c && b < a) ? "15" : (c < a && c < b) ? "1" : "-";
+res = (a < b && a < c) ? a : (b < c && b < a) ? b : (c < a && c < b) ? c : "-";
 
 console.log(res); //1
 
 
 
-let d, v, k, l, result;
+let d, v, ost1, ost2, result;
 
-d = 8;
-v = 12.5;
+d = 9;
+v = 10.5;
+ost1 = ((ost1 = 10 - d) > 0)? ost1 : -ost1;
+ost2 = ((ost2 = 10 - v) > 0)? ost2 : -ost2;
+console.log(ost1,ost2);
 
-k = (10 - d > 0)? "(10-d)" : "-(10-d)";
-l = (10 - v > 0)? "(10 - v)" : "-(10 - v)";
-result = (k<l) ? "8" : "12.5";
-console.log(result); //
-
+result = (ost1<ost2) ? d : v;
+console.log(result); 
