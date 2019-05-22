@@ -24,7 +24,7 @@ a = 10;
 b = 15;
 c = 1;
 
-res = (a < b && a < c) ? a : (b < c && b < a) ? b : (c < a && c < b) ? c : "-";
+res = (a < b && a < c) ? a : (b < c) ? b : c;
 
 console.log(res); //1
 
