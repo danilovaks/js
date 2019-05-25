@@ -11,15 +11,8 @@ console.log(C);
 
 //2
 
-let area = [1, null, 0, null, 1, null, null, null, null];
-let tab = "<table><tbody>";
-
-for(let j = 0; j < area.length; j++) {
-    if(j === 0 ) {
-        "<td>" = area[j];
-}
-tab = tab + "</tbody></table>";
-document.write(tab);
+let area = [ 1, null, 0, null, 1, null, null, null, null ], field, table;
+table = "<table><tbody>";
 
 /*for(let j = 0; j < area.length; j++) {
         if(j != 0 && j % 3 == 0) {
@@ -35,7 +28,7 @@ document.write(tab);
 
 //3
 
-let arr = [12,4,5,10,1,2], min, max;
+let arr = [12,4,3,10,1,20], min, max;
 
 min = arr [0];
 max = arr [0];
@@ -51,10 +44,10 @@ for(let i = 1; i < arr.length; i++ ) {
 
 console.log(min, max);
 
-min = arr.indexOf(min); //важен порядок....!!!
-arr.splice(min, 1);
+console.log(arr.indexOf(1));
+console.log(arr.indexOf(20));
 
-max = arr.indexOf(max);
-arr.splice(max, 1);
+arr.splice(4);
+arr.splice(5);
 
 console.log(arr);
