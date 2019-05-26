@@ -1,53 +1,64 @@
 //1
 
-let A = [ 12, 4, 3, 10, 1, 20 ], B = [-3, -7, -100, -33], C = [];
+let arr1 = [1, 5, 8, 6];
+let arr2 = [1, 5, 8];
 
-C = A.concat(B);
-console.log(C);
+function comparison(array1, arrya2) { 
+	if (array1.length !== arrya2.length) {
+		return false; //Инструкция return указывает, что именно должна вернуть функция. После того, как отработает return функция завершается.
+	}
+	for (let i = 0; i < array1.length; i++) { 
+		if (array1[i] !== arrya2[i]){ 
+			return false;
+		} 
+	} 
+	return true;
+}
 
-C = B.concat(A);
-console.log(C);
-
+console.log(comparison(arr1, arr2));
 
 //2
 
-let area = [ 1, null, 0, null, 1, null, null, null, null ], field, table;
-table = "<table><tbody>";
+let a = 2, b = 15, c = 3; //решить если b будет меньше a
 
-/*for(let j = 0; j < area.length; j++) {
-        if(j != 0 && j % 3 == 0) {
-            document.write("X");
-        }
-        if(j === 0 ) {
-        	document.write("0");
-        } else {
-        	document.write(" ");
-        }
-    }*/
-    
+function range(start, finish, step) {
+	let arr = [];
+	if(step === undefined) {
+        step = 1;
+	}
+	for(let j = start; j < finish; j = j + step) {
+		arr.push(j);
+	} 
+	return arr;
+}   
+
+console.log(range(a, b, c));
 
 //3
 
-let arr = [12,4,3,10,1,20], min, max;
+let student = {
+	name: "Василий",
+	surname: "Брусничный",
+	age: "20",
+	interests: ["Литература ", "Баскетбол ", "Еда "],
+	place: "СПбГУ"
+};
 
-min = arr [0];
-max = arr [0];
-
-for(let i = 1; i < arr.length; i++ ) {
-	if( min > arr[i]) {
-		min = arr[i];
-	}
-	if( max < arr[i]) {
-		max = arr[i];
-	}
+function contentOutput({name, surname, age, interests, place}) {
+	alert("Имя: " + name + "\n" + "Фамилия: " + surname + "\n" + 
+	"Возраст: " + age + "\n" + "Интересы: " + interests + "\n" + 
+	"Место учебы: " + place); //объект будет разбит на переменные
 }
 
-console.log(min, max);
+contentOutput(student);
 
-console.log(arr.indexOf(1));
-console.log(arr.indexOf(20));
 
-arr.splice(4);
-arr.splice(5);
+function printObject(obj) {
+  let out = "";
+  for (let p in obj) {//ключ "p"существует
+    out = out + p /*ключ*/ + ": " + obj[p]/*значение ключа*/ + "\n";
+  }
+  alert(out);
+}
 
-console.log(arr);
+printObject(student);
