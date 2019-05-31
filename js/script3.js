@@ -15,9 +15,11 @@ let area = [1, null, 0, null, 1, null, null, null, null];
 let tab = "<table><tbody>"; //как здесь прописать стиль?
 
 for (let j = 0; j < area.length; j++) {
+
     if (j != 0 && j % 3 === 0) {
         tab = tab + "<tr>";//появляется строка 
-    }
+    } 
+
     if (area[j] === 1) {
         tab = tab + "<td>" + "x" + "</td>"; //появляется ячейка
     } else if (area[j] === 0) {
@@ -25,8 +27,10 @@ for (let j = 0; j < area.length; j++) {
     } else {
         tab = tab + "<td>" + " " + "</td>";
     }
+
 }
 
+tab = tab + "</tr>";
 tab = tab + "</tbody></table>";
 document.write(tab);
 
