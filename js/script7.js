@@ -15,20 +15,16 @@ function timer() {
     let s = date.getSeconds();
 
     if(h < 10) {
-    	h = "0" + h + ":";
-    	m = m + ":";
-    	s = s;
-    } else if(m < 10) {
-    	m = "0" + m + ":";
-    	h = h + ":";
-    	s = s;
-    } else if(s < 10) {
-    	s = "0" + s;
-    	h = h + ":";
-    	m = m + ":";
+    	h = "0" + h;
     } 
-    span1.innerHTML = h;
-    span2.innerHTML = m;
+    if(m < 10) {
+    	m = "0" + m;
+    }
+    if(s < 10) {
+    	s = "0" + s;
+    } 
+    span1.innerHTML = h + ":";
+    span2.innerHTML = m + ":";
     span3.innerHTML = s;
 }
 
