@@ -26,6 +26,7 @@ function generation(min, max) {
 	function saveNum() {
 		let num = Math.floor(Math.random() * max) + min;
 		//return arr.includes(num) ? saveNum() : (arr.push(num), num);
+
 		while(!arr.includes(num)){
 			num = Math.floor(Math.random() * max) + min;
 			arr.push(num);
@@ -35,7 +36,7 @@ function generation(min, max) {
 	return saveNum;
 }
 
-let x = generation(1, 100);// переменная = функция, переменная с () ???? + решить как вывести весь архив
+let x = generation(1, 100);// + решить как вывести весь архив
 
 console.log(x());
 console.log(x());
@@ -48,14 +49,12 @@ let student = {
 	surname: "Брусничный",
 	age: "20",
 	interests: ["литература", " баскетбол", " еда"],
-	place: "СПбГУ"
+	place: "СПбГУ",
+	helpStudent: function () {
+	return this.name + " " + this.surname + ". " + this.age + "год(лет). Интересы: " + this.interests + ". Учится в " + this.place + ". ";}
 };
 
-function helpStudent() {
-	return this.name + " " + this.surname + ". " + this.age + "год(лет). Интересы: " + this.interests + ". Учится в " + this.place;
-}
-
-console.log(helpStudent.call(student));
+console.log(student.helpStudent());
 
 //4
 

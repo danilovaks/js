@@ -17,7 +17,7 @@ let tab = "<table><tbody>"; //как здесь прописать стиль?
 for (let j = 0; j < area.length; j++) {
 
     if (j != 0 && j % 3 === 0) {
-        tab = tab + "<tr>";//появляется строка 
+        tab = tab + "<tr></tr>";//появляется строка 
     } 
 
     if (area[j] === 1) {
@@ -30,7 +30,7 @@ for (let j = 0; j < area.length; j++) {
 
 }
 
-tab = tab + "</tr>";
+//tab = tab + "</tr>";
 tab = tab + "</tbody></table>";
 document.write(tab);
 

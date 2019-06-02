@@ -11,3 +11,32 @@ td {
 	height: 50px;
 	margin: 0.5em;
 }
+
+.time {
+	width: 100px;
+	text-align: center;
+	margin: 10px;
+}
+
+.time span:nth-child(2) {
+	background-color: red;
+}
+
+.coloring div {
+	width: 100px;
+	height: 50px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: orange;
+}
+
+.button {
+	width: 100px;
+	height: 30px;
+	margin: 10px;
+	text-align: center;
+	line-height: 28px;
+	color: white;
+	border-radius: 10px;
+	background-color: blue;
+}

@@ -25,7 +25,7 @@ let Str = prompt("Введите пароль:");
 let reg1 = /[!$#%\w]{10}/g;
 let reg2 = /[a-z]/g;
 let reg3 = /[A-Z]/g;
-let reg4 = /\d{3}/g;
+let reg4 = /(.*\d){2}/g;
 let reg5 = /[!$#%]{1}/g;
 
 if(!reg1.test(Str)) {
@@ -33,7 +33,7 @@ if(!reg1.test(Str)) {
 } else if(!reg2.test(Str) && !reg3.test(Str)) {
     alert("в пароле нет латинских букв нижнего или верхнего региста");
 } else if(!reg4.test(Str)) {
-    alert("в пароле отсутствуют цифры или их менее трех");
+    alert("в пароле отсутствуют цифры или их менее двух");
 } else if(!reg5.test(Str)) {
     alert("в пароле должен присутствовать один символ из: !,$,#,%");
 } else (alert("пароль подходит"));

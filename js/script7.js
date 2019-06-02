@@ -1,17 +1,35 @@
 //1
 
-function timer(obj) {
+let span1 = document.getElementById("sp1");
+span1.style.background = "blue";
+let span2 = document.querySelector(".time span:nth-child(2)");// не работает???
+span1.style.background = "green";
+let span3 = document.querySelector(".time span:nth-child(3)");
+span1.style.background = "yellow";
+
+
+function timer() {
 	let date = new Date();
     let h = date.getHours();
     let m = date.getMinutes();
     let s = date.getSeconds();
-    let result;
-    if(h < 10 || m < 10 || s < 10) {
-    	result = "0" + h + ":" + "0" + m + ":" + "0" + s;
-    } else {
-    	result = h + ":" + m + ":" + s;
-    }
-    //obj.res.value = result;
+
+    if(h < 10) {
+    	h = "0" + h + ":";
+    	m = m + ":";
+    	s = s;
+    } else if(m < 10) {
+    	m = "0" + m + ":";
+    	h = h + ":";
+    	s = s;
+    } else if(s < 10) {
+    	s = "0" + s;
+    	h = h + ":";
+    	m = m + ":";
+    } 
+    span1.innerHTML = h;
+    span2.innerHTML = m;
+    span3.innerHTML = s;
 }
 
 setInterval(timer, 1000);
@@ -23,13 +41,15 @@ let arr = [{},]
 //3
 
 function trafficLight(){
-	let i = 2, 
-	arrColor = ["red", "yellow", "green"];
+	let arrColor = ["red", "yellow", "green"], i = 2;
 
 	function TLcall(){
 		let div = document.getElementsByClassName("traffic-light");
 		div[i].style.backgroundColor = "";
-		if (++i > 2) i = 0;
+		
+		if (++i > 2) {
+			i = 0;
+		} 
    		div[i].style.backgroundColor = arrColor[i];
 	}
     return TLcall;
