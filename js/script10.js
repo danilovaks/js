@@ -41,7 +41,7 @@ function Student(name, age, sex, hobby, institute) {
 	Person.call(this, name, age, sex, hobby);
 	this.institute = institute;
 	this.toString = function() {
-		return "Студент: " + name + ". Возраст: " + age + " лет. Пол: " + sex + ". Интересы: " + hobby + ". Обучается в " + this.institute;
+		return "Студент: " + name + ". Возраст: " + age + " лет. Пол: " + sex + ". Интересы: " + hobby + ". Обучается в " + this.institute + ".";
 	}
 }
 
@@ -160,3 +160,4 @@ new Uint8ClampedArray(length);
 new Uint8ClampedArray(typedArray);
 new Uint8ClampedArray(object);
 new Uint8ClampedArray(buffer [, byteOffset [, length]]);
+*/
