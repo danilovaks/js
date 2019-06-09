@@ -18,10 +18,6 @@ td {
 	margin: 10px;
 }
 
-.time span:nth-child(2) {
-	background-color: red;
-}
-
 .coloring div {
 	width: 100px;
 	height: 50px;
@@ -39,4 +35,9 @@ td {
 	color: white;
 	border-radius: 10px;
 	background-color: blue;
+}
+
+.avatar {
+	width: 100px;
+	background-image: url("grenland.jpg");
 }

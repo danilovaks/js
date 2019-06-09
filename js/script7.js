@@ -2,10 +2,10 @@
 
 let span1 = document.getElementById("sp1");
 span1.style.background = "blue";
-let span2 = document.querySelector(".time span:nth-child(2)");// не работает???
-span1.style.background = "green";
+let span2 = document.querySelector(".time span:nth-child(2)");
+span2.style.background = "green";
 let span3 = document.querySelector(".time span:nth-child(3)");
-span1.style.background = "yellow";
+span3.style.background = "yellow";
 
 
 function timer() {
@@ -32,7 +32,38 @@ setInterval(timer, 1000);
 
 //2 
 
-let arr = [{},]
+let arr = [{
+	img: "img/grenland.jpg",
+	name: "tulen1",
+	description: "Гренландский тюлень 1"
+	}, {
+	img: "img/grenland2.jpg",
+	name: "tulen2",
+	description: "Гренландский тюлень 2"
+	}, {
+	img: "img/grenland3.jpg",
+	name: "tulen3",
+	description: "Гренландский тюлень 3"
+	}];
+
+function arrOutput(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		let container = document.createElement("div");
+		document.body.appendChild(container);
+		let name = document.createElement("h3");
+		container.appendChild(name);
+		name.innerText = arr[i].name;
+	    let img = document.createElement("img");  
+	    container.appendChild(img);
+	    img.style.width = "100px";
+	    img.src = arr[i].img;
+	    let description = document.createElement("p");
+	    container.appendChild(description);
+	    description.innerText = arr[i].description;
+	}
+}
+
+arrOutput(arr);
 
 //3
 
