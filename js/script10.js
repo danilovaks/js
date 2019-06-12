@@ -4,32 +4,55 @@ function Product(name, price) {
 	this.name = name;
 	this.price = price;
 
-	return {pro: name + " " + price};
+	//return {pro: name + " " + price};
 }
 
-let product1 = new Product("Книга1", "200руб");
+let product1 = new Product("Книга1", 200);
+let product2 = new Product("Книга1", 300);
+let product3 = new Product("Книга3", 400);
+//console.log(product1.pro);
 
-console.log(product1.pro);
-
-/*function ShoppingBasket() {
-	let products = [];
+function ShoppingBasket() {
+    let goods = [];
 	let numberOfGoods = 0;
 	let amountOfGoods = 0;
 
-	this.add = function(product, quantity) {
-		products[quantity] = product;
+  	this.add = function(Product){
+    	goods.push(Product);
+        return goods;
+  	};
+
+	this.numberOfGoods = function() {
+	    numberOfGoods = goods.length;
+        return numberOfGoods;
 	};
-	this.sum = function (key) {
-		return products[key];
+
+	this.amountOfGoods = function() {
+		for(let i = 0; i < goods.length; i++) {
+			amountOfGoods = amountOfGoods + goods[i].price;
+		}
+	    return amountOfGoods;
 	};
-}*/
+}
+
+let basket = new ShoppingBasket();
+basket.add(product1);
+basket.add(product2);
+basket.add(product3);
+
+console.log("Количество товаров: " + basket.numberOfGoods());
+console.log("Сумма товаров: " + basket.amountOfGoods());
 
 //2
 
 function Person(name, age, sex, hobby) {
+	this.name = name;
+	this.age = age;
+	this.sex =sex;
+	this.hobby = hobby;
 
 	this.toString = function() {
-		return "Человек: " + name + ". Возраст: " + age + " лет. Пол: " + sex + ". Интересы: " + hobby + ".";
+		return "Человек: " + this.name + ". Возраст: " + this.age + " лет. Пол: " + this.sex + ". Интересы: " + this.hobby + ".";
 	}
 }
 
@@ -79,7 +102,6 @@ alert(user2);
 
 let user3 = User.dateUser("Ваня", 20);
 alert(user3);
-
 
 //4 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference
 

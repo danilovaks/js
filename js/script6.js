@@ -28,16 +28,17 @@ function generation(min, max) {
 		//return arr.includes(num) ? saveNum() : (arr.push(num), num);
 
 		while(!arr.includes(num)){
-			num = Math.floor(Math.random() * max) + min;
 			arr.push(num);
+			return num;
 		}
-		return num;
 	}
 	return saveNum;
 }
 
-let x = generation(1, 100);// + решить как вывести весь архив
+let x = generation(1, 100);
 
+console.log(x());
+console.log(x());
 console.log(x());
 console.log(x());
 console.log(x());
